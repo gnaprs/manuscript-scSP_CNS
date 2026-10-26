@@ -11,8 +11,6 @@ Michael L. Roukes, Tsui-Fen Chou, Viviana Gradinaru*
 \# Equal contribution  
 \* Corresponding author
 
-
-
 This repository provides Python analysis code used to generate figures in the manuscript.  
 The analyses rely on processed proteomics and transcriptomics data deposited in public repositories, together with the authors’ open-source analysis package [**scpviz**](https://github.com/gnaprs/scpviz).
 
@@ -39,14 +37,10 @@ Processed proteomics and transcriptomics reports (`.tsv`, `.csv`, `.parquet`) ar
 
 Raw data can be downloaded from:
 
-- **MassIVE**: MSV000100704  
-- **ProteomeXchange**: PXD074008  
+- **MassIVE**: [MSV000100704](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=dd7f039446bd4db79a506b35a8dbb312)
+- **ProteomeXchange**: [PXD074008](https://proteomecentral.proteomexchange.org/ui?pxid=PXD074008)
 
 For running the analysis within this directory, only processed reports found in `data/` are required; the raw MS files are not needed to reproduce figures. All report files should be placed in a local directory that will be referenced in the notebooks (paths are documented in the notebooks).
-
-At the time of this preprint and ongoing peer review, the processed proteomics reports are available under controlled access through the repository’s reviewer mechanism. Researchers requiring access during this period may contact the corresponding authors to request the temporary access credentials.
-
-Full public access to all processed datasets will be enabled upon formal publication.
 
 ## Setup
 
