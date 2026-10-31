@@ -1,0 +1,8 @@
+# Processed data is not yet public; keep the data folder out of git except its README.
+data/*
+!data/README.md
+
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store

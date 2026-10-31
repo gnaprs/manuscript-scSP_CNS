@@ -1,6 +1,6 @@
 # Code repository for "Molecularly-guided spatial proteomics captures single-cell identity of the healthy and diseased nervous system"
 
-This repository contains code associated with the manuscript:
+This repository contains analysis code associated with the manuscript:
 
 **Molecularly-guided spatial proteomics captures single-cell identity of the healthy and diseased nervous system**  
 *DOI: [10.1101/2025.02.10.637505](https://www.biorxiv.org/content/10.1101/2025.02.10.637505v2)*  
@@ -11,36 +11,42 @@ Michael L. Roukes, Tsui-Fen Chou, Viviana Gradinaru*
 \# Equal contribution  
 \* Corresponding author
 
-This repository provides Python analysis code used to generate figures in the manuscript.  
-The analyses rely on processed proteomics and transcriptomics data deposited in public repositories, together with the authors’ open-source analysis package [**scpviz**](https://github.com/gnaprs/scpviz).
+**Code archive (Zenodo):** [10.5281/zenodo.21987350](https://doi.org/10.5281/zenodo.21987350)
+
+The manuscript has been accepted for publication. This repository provides the Python notebooks used to generate the figures, together with the supplementary tables. Analyses rely on the authors’ open-source package [**scpviz**](https://github.com/gnaprs/scpviz).
 
 ## Contents
 
-- `analysis_scSP_manuscript.ipynb`  
-  Generates proteomics-based figures and analyses from the original preprint.
+- `analysis_*.ipynb`  
+  Python notebooks that perform the analyses and generate the figures.
 
-- `analysis_scSP_manuscript_transcriptomics.ipynb`  
-  Transcriptomics-informed analyses and cross-omics comparisons.
+- `environment.yml`  
+  Conda environment used to run the notebooks.
 
-- `analysis_scSP_revision.ipynb`  
-  Generates proteomics-based figures and analyses from the revised manuscript.
-
-- `data/`  
-  Directory containing processed input files required to run the notebooks. *At the time of this preprint and ongoing peer review, the processed proteomics reports are available under controlled access through the repository’s reviewer mechanism. Researchers requiring access during this period may contact the corresponding authors to request the temporary access credentials.*
-
-Paths to downloaded data may need to be adjusted at the top of each notebook.
+- `supplementary tables/`  
+  Supplementary tables and source data for the manuscript (see [Supplementary tables](#supplementary-tables) below).
 
 ## Data availability
 
+### Supplementary tables
+
+The supplementary tables are provided in [`supplementary tables/`](supplementary%20tables/):
+
+- `Source data for graphs.xlsx`: source data for the graphs in the manuscript
+- `Supp. Table 1_OmicsComparison.xlsx`: omics comparison
+- `Supp. Table 2_dropviz data_SNpc_Cortex.xlsx`: Dropviz data for SNpc and cortex
+- `Supp. Table 3_RNA-FISH-probes.xlsx`: RNA-FISH probes
+- `Supp. Table 4_LaserCaptureMicrodissectionSettings.xlsx`: laser capture microdissection settings
+- `Supp. Table 5_LCMSMSSettings.xlsx`: LC-MS/MS settings
+- `Supp. Table 6_DE.xlsx`: differential expression results
+- `Supp. Table 7_SampleCounts_Info.xlsx`: sample counts and information
+
+### Raw mass spectrometry data
+
+- **MassIVE:** [MSV000100704](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=dd7f039446bd4db79a506b35a8dbb312)
+- **ProteomeXchange:** [PXD074008](https://proteomecentral.proteomexchange.org/ui?pxid=PXD074008)
+
 Transcriptomic reference data were obtained from the Allen Brain Atlas and Dropviz, as described in the manuscript.
-Processed proteomics and transcriptomics reports (`.tsv`, `.csv`, `.parquet`) are found in the `data/` folder of this repository.
-
-Raw data can be downloaded from:
-
-- **MassIVE**: [MSV000100704](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=dd7f039446bd4db79a506b35a8dbb312)
-- **ProteomeXchange**: [PXD074008](https://proteomecentral.proteomexchange.org/ui?pxid=PXD074008)
-
-For running the analysis within this directory, only processed reports found in `data/` are required; the raw MS files are not needed to reproduce figures. All report files should be placed in a local directory that will be referenced in the notebooks (paths are documented in the notebooks).
 
 ## Setup
 
